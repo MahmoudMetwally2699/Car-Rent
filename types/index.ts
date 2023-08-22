@@ -66,3 +66,9 @@ export interface SearchManuFacturerProps {
   manufacturer: string;
   setManuFacturer: (manufacturer: string) => void;
 }
+export interface Rest {
+
+  setManuFacturer: (manufacturer: string) => void;
+  setModel: (Model: string) => void;
+
+}

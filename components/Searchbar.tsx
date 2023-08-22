@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import SearchManufacturer from "./SearchManufacturer";
+import RestButton from "./RestButton";
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
   <button type='submit' className={`-ml-3 z-10 ${otherClasses}`}>
@@ -57,6 +58,10 @@ const SearchBar = () => {
 
     router.push(newPathname,{scroll:false});
   };
+  const resetInputs = () => {
+    setManuFacturer("");
+    setModel("");
+  };
 
   return (
     <form className='searchbar' onSubmit={handleSearch}>
@@ -86,6 +91,9 @@ const SearchBar = () => {
         <SearchButton otherClasses='sm:hidden' />
       </div>
       <SearchButton otherClasses='max-sm:hidden' />
+      <RestButton   setManuFacturer={setManuFacturer}
+      setModel={setModel}  />
+
     </form>
   );
 };

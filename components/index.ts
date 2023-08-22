@@ -6,6 +6,7 @@ import NavBar from "./Navbar";
 import ShowMore from "./ShowMore";
 import SearchBar from "./Searchbar";
 import Hero from "./Hero";
+import RestButton from './RestButton';
 
 export {
   Hero,
@@ -16,4 +17,5 @@ export {
   NavBar,
   ShowMore,
   SearchBar,
+  RestButton
 };
